@@ -88,9 +88,8 @@ h3.emphasize {
   top: 16px;
 }
 .article ul.style li .announce {
-  font-size: 32px;
   top: 28px;
-  right: 70px;
+  left: -105px;
 }
 .article ul.style li .fight {
   color: #f00;
@@ -168,4 +167,9 @@ ul > li.sponsor img {
 }
 .dates a:hover {
   color: #816c3c;
+}
+.release li {
+  color: #777;
+  font-size: 14px;
+  line-height: 2em;
 }
