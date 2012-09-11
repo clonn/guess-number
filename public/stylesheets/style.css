@@ -81,14 +81,16 @@ h3.emphasize {
 }
 .article ul.style li .announce,
 .article ul.style li .kunfu {
+  font-size: 21px;
+  color: #f00;
   display: inline;
   position: relative;
   top: 16px;
 }
 .article ul.style li .announce {
   font-size: 32px;
-  top: 22px;
-  right: 50px;
+  top: 28px;
+  right: 70px;
 }
 .article ul.style li .fight {
   color: #f00;
@@ -104,8 +106,17 @@ h3.emphasize {
   top: 20px;
   right: 80px;
 }
-.article ul.style li.release {
-  text-align: center;
+.article ul.style li .external-link {
+  font-family: '04b_03', monospace;
+  font-weight: bold;
+}
+.article ul.style li .bd {
+  margin-left: 50px;
+}
+.article ul.style li .bd .tip {
+  margin: 10px 0;
+  color: #777;
+  font-size: 13px;
 }
 .footer {
   text-align: right;
@@ -115,4 +126,33 @@ h3.emphasize {
 ul > li {
   text-align: left;
   display: inline-block;
+}
+ul > li.host img {
+  width: 60px;
+  height: 60px;
+}
+ul > li.sponsor img {
+  width: 150px;
+  height: 60px;
+}
+.land {
+  text-align: right;
+  position: relative;
+  padding-bottom: 20px;
+}
+.land .short-sentence {
+  font-size: 36px;
+  right: 80px;
+  position: relative;
+}
+.land .print {
+  border-radius: 5px;
+  display: inline-block;
+  border: 2px solid #f00;
+}
+.land .print span {
+  display: block;
+}
+.land .print a {
+  color: #f00;
 }

@@ -66,6 +66,8 @@ h3.emphasize
       position: relative;
       .announce,
       .kunfu
+        font-size: 21px;
+        color: #f00;
         display: inline;
         position: relative;
         top: 16px;
@@ -82,9 +84,16 @@ h3.emphasize
         left: -80px;
       .person-3
         top: 20px;
-        right: 80px;
-    li.release
-      text-align: center;
+        right: 90px;
+      .external-link
+        font-family: '04b_03',monospace;
+        font-weight: bold;
+      .bd
+        margin-left: 50px;
+        .tip
+          margin: 10px 0;
+          color: #777;
+          font-size: 13px;
 .footer
     text-align: right;
     padding-top: 10px;
@@ -92,3 +101,27 @@ h3.emphasize
   ul > li
     text-align: left;
     display: inline-block;
+    &.host
+      img
+        width: 60px;
+        height: 60px;
+    &.sponsor
+      img
+        width: 150px;
+        height: 60px;
+.land
+  text-align: right;
+  position: relative;
+  padding-bottom: 20px;
+  .short-sentence
+    font-size: 36px;
+    right: 80px;
+    position: relative;
+  .print
+    border-radius: 5px;
+    display: inline-block;
+    border: 2px solid #f00;
+    span
+     display: block;
+    a
+      color: #f00;
