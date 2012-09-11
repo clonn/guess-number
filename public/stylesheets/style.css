@@ -1,9 +1,23 @@
+@font-face {
+  font-family: '04b_03';
+  src: url("/fonts/04b_03__-webfont.eot?iefix") format(eot), url("/fonts/04b_03__-webfont.woff") format(woff), url("/fonts/04b_03__-webfont.ttf") format(truetype), url("/fonts/04b_03__-webfont.svg#webfontiFL0wwqh") format(svg);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 10px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 a {
   color: #00b7ff;
+}
+.header ul {
+  list-style: none;
+  text-align: right;
+}
+.header ul li {
+  display: inline;
 }
 h1.logo {
   text-align: center;
@@ -13,7 +27,6 @@ h1.logo a {
   font-family: '04b_03', monospace;
   font-weight: bold;
   font-size: 64px;
-  word-spacing: -0.5ex;
 }
 h1.logo a:hover,
 h1.logo a:active {
@@ -36,11 +49,70 @@ h1.logo a .ko {
 }
 h3.bulla {
   padding: 5px 10px;
-  background: #eee6db;
+  background: #dacf75;
 }
 h3.bulla span {
   text-align: center;
   border: 1px solid #777;
   display: block;
   background: #cca347;
+}
+h3.emphasize {
+  padding: 10px 20px;
+  text-align: center;
+  color: #f00;
+  font-size: 74px;
+}
+.article {
+  padding: 0 10px;
+}
+.article p {
+  line-height: 2em;
+  padding-top: 10px;
+  border-top: dotted 4px #ccc;
+}
+.article .dates {
+  font-size: 21px;
+  text-align: center;
+}
+.article ul.style li {
+  display: block;
+  position: relative;
+}
+.article ul.style li .announce,
+.article ul.style li .kunfu {
+  display: inline;
+  position: relative;
+  top: 16px;
+}
+.article ul.style li .announce {
+  font-size: 32px;
+  top: 22px;
+  right: 50px;
+}
+.article ul.style li .fight {
+  color: #f00;
+}
+.article ul.style li .icon-profile {
+  position: relative;
+}
+.article ul.style li .person-2 {
+  top: 20px;
+  left: -80px;
+}
+.article ul.style li .person-3 {
+  top: 20px;
+  right: 80px;
+}
+.article ul.style li.release {
+  text-align: center;
+}
+.footer {
+  text-align: right;
+  padding-top: 10px;
+  border-top: dotted 4px #ccc;
+}
+ul > li {
+  text-align: left;
+  display: inline-block;
 }
