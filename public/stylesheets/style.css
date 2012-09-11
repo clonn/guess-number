@@ -123,17 +123,24 @@ h3.emphasize {
   padding-top: 10px;
   border-top: dotted 4px #ccc;
 }
+ul {
+  position: relative;
+}
 ul > li {
   text-align: left;
   display: inline-block;
+}
+ul > li .header {
+  position: absolute;
+  top: 0;
 }
 ul > li.host img {
   width: 60px;
   height: 60px;
 }
 ul > li.sponsor img {
-  width: 150px;
-  height: 60px;
+  width: 130px;
+  height: 30px;
 }
 .land {
   text-align: right;
