@@ -163,3 +163,9 @@ ul > li.sponsor img {
 .land .print a {
   color: #f00;
 }
+.dates a {
+  color: #cca347;
+}
+.dates a:hover {
+  color: #816c3c;
+}
