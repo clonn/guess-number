@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "Guess-number",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,8 +9,7 @@
     "express": "3.0.0rc4",
     "ejs": "*",
     "stylus": "*",
-    "connect": "2.4.5",
-    "connect-assetmanager": "0.0.28",
-    "connect-assetmanager-handlers": "0.0.18"
+    "nib": "0.8.2",
+    "connect": "2.4.5"
   }
 }
