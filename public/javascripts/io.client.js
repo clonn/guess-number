@@ -13,6 +13,9 @@
         num2Node = formNode.find('input[name=num2]'), 
         ansNode = formNode.find('input[name=ans]');
 
+    socket.on('init', function (data) {
+      $('.hd p').html(data.id); 
+    });
 
     // form submit event
     formNode.on('submit', function (e) {
@@ -28,8 +31,15 @@
     });
 
     socket.on('bingo', function (data) {
-    
-      alert(data.id + ' answer the right! ' + data.time);
+      $('.record').append('<p>' + data.id + ' answer the right! ' + data.time + '</p>');
+    });
+
+    socket.on('reset', function (data) {
+      $('.num1').html(data.num1);
+      $('.num2').html(data.num2);
+      num1Node.val(data.num1);
+      num2Node.val(data.num2);
+      ansNode.val('');
     });
 
   });
