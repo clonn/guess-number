@@ -9,7 +9,10 @@ var express = require('express'),
     http = require('http'),
     path = require('path'),
     stylus = require('stylus'),
-    nib = require('nib');
+    nib = require('nib'),
+    socketio = require('socket.io'),
+    io,
+    server;
 
 var app = express();
 
@@ -46,11 +49,18 @@ app.get('/', routes.index);
 app.post('/sum', routes.sum);
 //app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
+server = http.createServer(app);
+server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
 
 app.use(function(err, req, res, next){
   console.error(err.stack);
   res.send(500, 'NodeKonckout Broken!!!');
+});
+
+io = socketio.listen(server);
+
+io.sockets.on('connection', function (socket) {
+  console.log('hello guest');
 });
