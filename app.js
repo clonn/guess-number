@@ -15,10 +15,7 @@ var app = express();
 
 
 function compile(str, path) {
-  return stylus(str)
-    .set('filename', path)
-    .set('compress', true)
-    .use(nib());
+  return stylus(str).set('filename', path).set('compress', true).use(nib());
 }
 
 app.configure(function(){
@@ -35,7 +32,7 @@ app.configure(function(){
     stylus.middleware({
       src: __dirname + '/public',
       compile: compile
-    }),
+    })
   );
   //app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.static(path.join(__dirname, 'public')));
