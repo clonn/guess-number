@@ -11,7 +11,7 @@
         formNode = $('form'),
         num1Node = formNode.find('input[name=num1]'), 
         num2Node = formNode.find('input[name=num2]'), 
-        num2Node = formNode.find('input[name=ans]');
+        ansNode = formNode.find('input[name=ans]');
 
 
     // form submit event
@@ -19,7 +19,17 @@
 
       e.preventDefault();
 
+      socket.emit('submit', {
+        num1: num1Node.val(),
+        num2: num2Node.val(),
+        ans: ansNode.val()
+      });
+
+    });
+
+    socket.on('bingo', function (data) {
     
+      alert(data.id + ' answer the right! ' + data.time);
     });
 
   });
