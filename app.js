@@ -10,8 +10,6 @@ var express = require('express'),
     path = require('path'),
     stylus = require('stylus'),
     nib = require('nib'),
-    socketio = require('socket.io'),
-    io,
     server;
 
 var app = express();
@@ -59,8 +57,4 @@ app.use(function(err, req, res, next){
   res.send(500, 'NodeKonckout Broken!!!');
 });
 
-io = socketio.listen(server);
-
-io.sockets.on('connection', function (socket) {
-  console.log('hello guest');
-});
+require('./io.server').io(server);
