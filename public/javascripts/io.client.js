@@ -8,12 +8,14 @@
   $(document).ready(function () {
 
     var socket = io.connect(),
+        userid,
         formNode = $('form'),
         num1Node = formNode.find('input[name=num1]'), 
         num2Node = formNode.find('input[name=num2]'), 
         ansNode = formNode.find('input[name=ans]');
 
     socket.on('init', function (data) {
+      userid = data.id;
       $('.hd p').html(data.id); 
     });
 
@@ -31,7 +33,11 @@
     });
 
     socket.on('bingo', function (data) {
-      $('.record').append('<p>' + data.id + ' answer the right! ' + data.time + '</p>');
+      if (userid === data.id) {
+        $('.record').prepend('<p class="success">You win a game! <br/>' + data.time + '</p>');
+      } else {
+        $('.record').prepend('<p>' + data.id + ' answer the right! <br/>' + data.time + '</p>');
+      }
     });
 
     socket.on('reset', function (data) {
